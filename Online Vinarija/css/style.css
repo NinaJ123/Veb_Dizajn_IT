@@ -1,0 +1,351 @@
+/*
+ * * * * * * * * * * * * * * * * 
+ * Predmet: Veb Dizajn         *
+ * Student: Ninoslava Jankovic *
+ * Indeks: 2018240721          *  
+ * * * * * * * * * * * * * * * *
+ */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Header */ 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.3);
+}
+.nav{
+    margin: 20px;
+}
+.nav ul{
+    list-style: none;
+}
+.nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+}
+.nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+.logo{
+    padding: 0 30px;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+}
+.nav ul li a.active{
+    border-bottom: 3px solid #a652fa;
+    padding: 17px 0;
+}
+.nav ul li a:hover{
+    border-bottom: 3px solid #a652fa;
+    padding: 17px 0;
+}
+
+/* Main */
+.main{
+    background-image: url("../slike/bg.jpg");
+    height: 92vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+}
+.main-text{
+    padding-top: 150px;
+    color: white;
+}
+.main-text h1{
+    font-size: 5em;
+    text-shadow: 6px 6px rgba(0, 0, 0, 0.8);
+}
+.main-text p{
+    font-size: 1.5em;
+}
+.dugmad button{
+    padding: 8px 16px;
+    font-size: 1.2em;
+    margin: 10px;
+    border-radius: 4px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+.dugmad button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* O nama */
+.onama{
+    margin: 20px 70px; 
+    text-align: center;
+}
+.onama p{
+    font-size: 1.2em;
+}
+
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px;
+    background-color: gainsboro;
+}
+.footer ul{
+    list-style: none;
+}
+.footer ul li{
+    font-size: 1.2em;
+}
+
+/* Kontakt */
+.kontakt-forma{
+    text-align: center;
+    margin: 20px 300px;
+    padding: 20px 50px;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.3);
+}
+.form-group{
+    display: grid;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.form-group label{
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+.form-group input{
+    padding: 5px;
+    font-size: 1.2em;
+}
+.form-group select{
+    padding: 6px 5px;
+    font-size: 1.2em;
+}
+.form-group textarea{
+    padding: 5px;
+    font-size: 1.2em;
+}
+.obavezno{
+    color: red;
+}
+.kontakt-forma button{
+    padding: 4px 8px;
+    font-size: 1.3em;
+    background: none;
+    border: 1px solid black;
+    color: black;
+    border-radius: 4px;
+}
+.kontakt-forma button:hover{
+    background: #a652fa;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #a652fa;
+}
+.kontakt{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mapa */
+.mapa{
+    text-align: center;
+    margin: 20px 150px;
+} 
+.mapa iframe{
+    margin-top: 20px;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Galerija */
+.galerija{
+    margin: 20px 150px;
+} 
+.galerija .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 45px;
+}
+.galerija .row img{
+    height: 180px;
+    width: 260px;
+    margin: 10px;
+}
+.galerija .row img:hover{
+    cursor: pointer;
+    box-shadow: 2px 6px 8px 2px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+}
+
+
+/* Lightbox */
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    max-width: 1000px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* Verzija 2.0 */
+  button a {
+      color: white;
+      text-decoration: none;
+  }
+  button:hover a{
+    color: black;
+  }
+
+
+  /* Porudzbina */
+  .porudzbina{
+      margin: 30px 50px;
+      height: 64.5vh;
+  }
+  .porudzbina button{
+      padding: 4px 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin: 10px 0;
+      background: none;
+      border-radius: 4px;
+  }
+  .porudzbina button:hover{
+      color: white;
+      background-color: #a652fa;
+      border: 1px solid#a652fa;
+  }
+  #racun{
+      margin-top: 20px; 
+  }
+
